@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Hangman"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="HangMan"  FontSize="18" Icon="icon.png" Width="778.293" Height="605.333">
     <Grid>
-        
+        <Image Source="CoverPhoto.png" Stretch="Fill"/>
     </Grid>
 </Window>
