@@ -5,11 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Hangman"
         mc:Ignorable="d"
-        Title="Hangman" Height="450" Width="800" WindowStartupLocation="CenterScreen" WindowState="Maximized" WindowStyle="SingleBorderWindow">
-    <Grid>
+        Title="Hangman" Height="800" Width="1500" WindowStartupLocation="CenterScreen" WindowState="Maximized" WindowStyle="SingleBorderWindow">
+   <Grid>
       <Grid.Background>
          <ImageBrush ImageSource="Images/CoverPhoto.png"/>
       </Grid.Background>
+      <Button x:Name="Play_Button" Margin="805,0,122.6,317.2" BorderThickness="2" Click="Play_Button_Click" Height="158" VerticalAlignment="Bottom" Foreground="{x:Null}" BorderBrush="Black" FontSize="72" FontWeight="Bold" Opacity="0.05">
+         <Button.Background>
+            <SolidColorBrush Color="Black" Opacity="0.02"/>
+         </Button.Background>
+      </Button>
+      <Slider x:Name="Level_Difficulty_Slider" HorizontalAlignment="Left" Margin="1140,721,0,0" VerticalAlignment="Top" Width="344" IsSnapToTickEnabled="True" Maximum="3" TickPlacement="BottomRight"
+              ValueChanged="Level_Difficulty_Slider_ValueChanged" IsMoveToPointEnabled="True"/>
+      <Label x:Name="Level_Difficulty_Label" Content="EASY" HorizontalAlignment="Left" Margin="1140,660,0,0" VerticalAlignment="Top" Height="34" Width="344" Background="Transparent" FontSize="24" 
+             HorizontalContentAlignment="Center" FontFamily="Ink Free" FontWeight="Bold" Foreground="White"/>
 
    </Grid>
 </Window>

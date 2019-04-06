@@ -24,5 +24,43 @@ namespace Hangman
       {
          InitializeComponent();
       }
+
+      /*********************************************************************/
+      /*                          Play button                              */
+      /*********************************************************************/
+      private void Play_Button_Click(object sender, RoutedEventArgs e)
+      {
+
+      }
+
+      /*********************************************************************/
+      /*                         Slider movement                           */
+      /*********************************************************************/
+      private void Level_Difficulty_Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+      {
+         int difficutly;
+         
+         difficutly = (int)Level_Difficulty_Slider.Value;
+
+         switch(difficutly)
+         {
+            case 0:
+               Level_Difficulty_Label.Content = "EASY";
+               break;
+            case 1:
+               Level_Difficulty_Label.Content = "MEDIUM";
+               break;
+            case 2:
+               Level_Difficulty_Label.Content = "HARD";
+               break;
+            case 3:
+               Level_Difficulty_Label.Content = "EXTREME";
+               break;
+            default:
+               Level_Difficulty_Label.Content = "ERROR";
+               break;
+         }
+         return;
+      }
    }
 }
