@@ -34,6 +34,16 @@ namespace Hangman
 
       }
 
+      private void Play_Button_MouseEnter(object sender, MouseEventArgs e)
+      {
+         Play_L_Label.Visibility = Visibility.Visible;
+      }
+
+      private void Play_Button_MouseLeave(object sender, MouseEventArgs e)
+      {
+         Play_L_Label.Visibility = Visibility.Hidden;
+      }
+
       /*********************************************************************/
       /*                         Slider movement                           */
       /*********************************************************************/
@@ -63,5 +73,6 @@ namespace Hangman
          }
          return;
       }
+
    }
 }
