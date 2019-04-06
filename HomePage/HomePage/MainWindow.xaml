@@ -18,12 +18,13 @@
 
       <Slider x:Name="Level_Difficulty_Slider" Margin="1162,0,31.6,31.2" IsSnapToTickEnabled="True" Maximum="3" TickPlacement="BottomRight" ValueChanged="Level_Difficulty_Slider_ValueChanged" IsMoveToPointEnabled="True" VerticalAlignment="Bottom" Height="31"/>
       <Label x:Name="Level_Difficulty_Label" Content="EASY" Margin="1140,0,9.6,69.2" Background="Transparent" FontSize="24" HorizontalContentAlignment="Center" FontFamily="Ink Free" FontWeight="Bold" Foreground="White" Height="46" VerticalAlignment="Bottom"/>
-
-      <Label x:Name="Play_L_Label" Margin="1002,0,394.6,373.2" RenderTransformOrigin="0.477,-0.906" Panel.ZIndex="-1" Visibility="Hidden" Height="95" VerticalAlignment="Bottom">
+      <Label x:Name="Play_L_Label" Margin="1003,0,399.6,375.2" VerticalAlignment="Bottom" Height="78" Panel.ZIndex="-1" Visibility="Hidden">
          <Label.Background>
             <ImageBrush ImageSource="Images/L.png"/>
          </Label.Background>
       </Label>
+
+
 
    </Grid>
 </Window>
