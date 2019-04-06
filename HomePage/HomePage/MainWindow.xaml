@@ -5,11 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Hangman"
         mc:Ignorable="d"
-        Title="Hangman" Height="450" Width="800" WindowStartupLocation="CenterScreen" WindowState="Maximized" WindowStyle="SingleBorderWindow">
+        Title="Hangman" Height="450" Width="800" Icon="Images/icon.png" WindowStartupLocation="Manual" WindowState="Maximized" WindowStyle="SingleBorderWindow">
     <Grid>
-      <Grid.Background>
-         <ImageBrush ImageSource="Images/CoverPhoto.png"/>
-      </Grid.Background>
+        <Grid.Background>
+            <ImageBrush ImageSource="Images/CoverPhoto.png"/>
+        </Grid.Background>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="449,169,0,0" VerticalAlignment="Top" Width="270" Opacity="0.02" Height="71"/>
 
-   </Grid>
+    </Grid>
 </Window>
