@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="Hangman" Height="450" Width="800" WindowStartupLocation="CenterScreen" WindowState="Maximized" WindowStyle="SingleBorderWindow">
     <Grid>
-        
-    </Grid>
+      <Grid.Background>
+         <ImageBrush ImageSource="Images/CoverPhoto.png"/>
+      </Grid.Background>
+
+   </Grid>
 </Window>

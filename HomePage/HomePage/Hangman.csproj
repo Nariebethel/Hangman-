@@ -149,14 +149,12 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Images\" />
+    <Resource Include="Images\CoverPhoto.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="CoverPhoto.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="icon.png" />
+    <Resource Include="Images\icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
