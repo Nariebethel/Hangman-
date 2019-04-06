@@ -10,14 +10,14 @@
       <Grid.Background>
          <ImageBrush ImageSource="Images/CoverPhoto.png"/>
       </Grid.Background>
-      <Button x:Name="Play_Button" Margin="805,0,122.6,317.2" BorderThickness="2" Click="Play_Button_Click" Height="158" VerticalAlignment="Bottom" Foreground="{x:Null}" BorderBrush="Black" FontSize="72" FontWeight="Bold" Opacity="0.05">
+      <Button x:Name="Play_Button" Margin="805,300,122.6,317.2" BorderThickness="2" Click="Play_Button_Click" Foreground="{x:Null}" BorderBrush="Black" FontSize="72" FontWeight="Bold" Opacity="0.05">
          <Button.Background>
             <SolidColorBrush Color="Black" Opacity="0.02"/>
          </Button.Background>
       </Button>
-      <Slider x:Name="Level_Difficulty_Slider" HorizontalAlignment="Left" Margin="1140,721,0,0" VerticalAlignment="Top" Width="344" IsSnapToTickEnabled="True" Maximum="3" TickPlacement="BottomRight"
-              ValueChanged="Level_Difficulty_Slider_ValueChanged" IsMoveToPointEnabled="True"/>
-      <Label x:Name="Level_Difficulty_Label" Content="EASY" HorizontalAlignment="Left" Margin="1140,660,0,0" VerticalAlignment="Top" Height="34" Width="344" Background="Transparent" FontSize="24" 
+      <Slider x:Name="Level_Difficulty_Slider" Margin="1162,713,31.6,45.2" IsSnapToTickEnabled="True" Maximum="3" TickPlacement="BottomRight"
+              ValueChanged="Level_Difficulty_Slider_ValueChanged" IsMoveToPointEnabled="True" VerticalAlignment="Center"/>
+      <Label x:Name="Level_Difficulty_Label" Content="EASY" Margin="1140,660,9.6,69.2" Background="Transparent" FontSize="24" 
              HorizontalContentAlignment="Center" FontFamily="Ink Free" FontWeight="Bold" Foreground="White"/>
 
    </Grid>
