@@ -31,14 +31,50 @@ namespace Hangman
       /*********************************************************************/
       private void Play_Button_Click(object sender, RoutedEventArgs e)
       {
+         string        level_difficulty;
+         EasyWindow    easy_window    = new EasyWindow();
+         MediumWindow  medium_window  = new MediumWindow();
+         HardWindow    hard_window    = new HardWindow();
+         ExtremeWindow extreme_window = new ExtremeWindow();
 
+         level_difficulty = Level_Difficulty_Label.Content.ToString();
+
+         switch(level_difficulty)
+         {
+            case "EASY":
+               easy_window.Show();
+               this.Close();
+               break;
+            case "MEDIUM":
+               medium_window.Show();
+               this.Close();
+               break;
+            case "HARD":
+               hard_window.Show();
+               this.Close();
+               break;
+            case "EXTREME":
+               extreme_window.Show();
+               this.Close();
+               break;
+            default:
+               MessageBox.Show("Error in difficulty", "Error");
+               break;
+            
+         }
       }
 
+      /*********************************************************************/
+      /*                         Activate L character                      */
+      /*********************************************************************/
       private void Play_Button_MouseEnter(object sender, MouseEventArgs e)
       {
          Play_L_Label.Visibility = Visibility.Visible;
       }
 
+      /*********************************************************************/
+      /*                       De-active L character                       */
+      /*********************************************************************/
       private void Play_Button_MouseLeave(object sender, MouseEventArgs e)
       {
          Play_L_Label.Visibility = Visibility.Hidden;
