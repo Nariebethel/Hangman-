@@ -10,6 +10,5 @@
         <Grid.Background>
             <ImageBrush ImageSource="Images/MediumBackground.png"/>
         </Grid.Background>
-        <Canvas HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Margin="1302,199,0,0" RenderTransformOrigin="0.684,0.567"/>
     </Grid>
 </Window>
