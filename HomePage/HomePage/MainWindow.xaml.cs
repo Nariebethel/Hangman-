@@ -44,19 +44,19 @@ namespace Hangman
          {
             case "EASY":
                easy_window.Show();
-               this.Close();
+               this.Hide();
                break;
             case "MEDIUM":
                medium_window.Show();
-               this.Close();
+               this.Hide();
                break;
             case "HARD":
                hard_window.Show();
-               this.Close();
+               this.Hide();
                break;
             case "EXTREME":
                extreme_window.Show();
-               this.Close();
+               this.Hide();
                break;
             default:
                MessageBox.Show("Error in difficulty", "Error");

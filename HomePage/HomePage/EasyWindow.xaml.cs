@@ -17,9 +17,14 @@ namespace Hangman
    /// <summary>
    /// Interaction logic for EasyWindow.xaml
    /// </summary>
+   /// 
+
+
    public partial class EasyWindow : Window
    {
-      List<string> easy_list = new List<string>()
+      private int random_number;
+      
+      private List<string> easy_list = new List<string>()
       {
          "apex",
          "dogs",
@@ -36,11 +41,13 @@ namespace Hangman
       public EasyWindow()
       {
          InitializeComponent();
+         Random random = new Random();
+         random_number = random.Next(1, 10);
       }
 
       private void Main_word()
       {
-         Random 
+         
       }
 
    }
