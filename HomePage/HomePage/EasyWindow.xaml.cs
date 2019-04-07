@@ -58,7 +58,7 @@ namespace Hangman
       {
          Random random = new Random();
 
-z         InitializeComponent();
+         InitializeComponent();
 
          main_window = window;
          random_number = random.Next(1, 10);
