@@ -129,7 +129,7 @@ namespace Hangman
       /*                                                 */
       /*********************************************************************/
       private void Home_Button_Click(object sender, RoutedEventArgs e)
-      {`
+      {
          main_window.Show();
          this.Close();
       }
