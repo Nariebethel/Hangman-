@@ -24,6 +24,10 @@ namespace Hangman
       public MainWindow()
       {
          InitializeComponent();
+         SoundPlayer main_music = new SoundPlayer();
+         main_music.SoundLocation = "Sounds/Background_Music.wma";
+         main_music.Load();
+         main_music.PlayLooping();
       }
 
       /*********************************************************************/
