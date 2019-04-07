@@ -159,6 +159,8 @@
     <Resource Include="Images\L.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Images\EasyBackground.png" />
+    <Resource Include="Images\MediumBackground.png" />
     <Content Include="Sound\Background.wav" />
     <Content Include="Sound\Chalk_Sound.mp3" />
   </ItemGroup>
