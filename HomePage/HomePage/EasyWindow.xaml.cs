@@ -24,7 +24,8 @@ namespace Hangman
    {
       private int random_number;
       private char[] word_letters;
-      
+      private MainWindow main_window;
+
       private List<string> easy_list = new List<string>()
       {
          "apex",
@@ -40,12 +41,26 @@ namespace Hangman
       };
 
       /*********************************************************************/
-      /*                                Main                               */
+      /*                       Default Constructor                         */
       /*********************************************************************/
       public EasyWindow()
       {
          InitializeComponent();
          Random random = new Random();
+         random_number = random.Next(1, 10);
+         word_letters = Get_Word();
+      }
+
+      /*********************************************************************/
+      /*                                                 */
+      /*********************************************************************/
+      public EasyWindow(MainWindow window)
+      {
+         Random random = new Random();
+
+z         InitializeComponent();
+
+         main_window = window;
          random_number = random.Next(1, 10);
          word_letters = Get_Word();
       }
@@ -108,6 +123,15 @@ namespace Hangman
                break;
          }
          return;
+      }
+
+      /*********************************************************************/
+      /*                                                 */
+      /*********************************************************************/
+      private void Home_Button_Click(object sender, RoutedEventArgs e)
+      {`
+         main_window.Show();
+         this.Close();
       }
 
       /*********************************************************************/
@@ -525,5 +549,6 @@ namespace Hangman
             Used_Letters_Label.Content += "Z ";
          }
       }
+
    }
 }

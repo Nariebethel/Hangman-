@@ -150,5 +150,6 @@
          <Label x:Name="Third_Letter_Label"  Content="___________________" HorizontalAlignment="Left" Margin="267,0,0,0" VerticalAlignment="Top" Height="83" Width="102" FontSize="36" FontFamily="Segoe UI Black" FontWeight="Bold" FontStyle="Italic" HorizontalContentAlignment="Center"/>
          <Label x:Name="Fourth_Letter_Label" Content="___________________" HorizontalAlignment="Left" Margin="393,0,0,0" VerticalAlignment="Top" Height="83" Width="102" FontSize="36" FontFamily="Segoe UI Black" FontWeight="Bold" FontStyle="Italic" HorizontalContentAlignment="Center"/>
       </Grid>
+      <Button x:Name="Home_Button" Content="Button" HorizontalAlignment="Left" Margin="1366,10,0,0" VerticalAlignment="Top" Width="113" Height="79" Background="Black" Opacity="0.1" Click="Home_Button_Click"/>
    </Grid>
 </Window>

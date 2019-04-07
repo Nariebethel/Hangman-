@@ -33,7 +33,7 @@ namespace Hangman
       private void Play_Button_Click(object sender, RoutedEventArgs e)
       {
          string        level_difficulty;
-         EasyWindow    easy_window    = new EasyWindow();
+         EasyWindow    easy_window    = new EasyWindow(this);
          MediumWindow  medium_window  = new MediumWindow();
          HardWindow    hard_window    = new HardWindow();
          ExtremeWindow extreme_window = new ExtremeWindow();
