@@ -159,8 +159,8 @@
     <Resource Include="Images\L.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Sounds\Background_Music.wma" />
-    <Content Include="Sounds\Chalk_Sound.wma" />
+    <Content Include="Sound\Background.wav" />
+    <Content Include="Sound\Chalk_Sound.mp3" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
