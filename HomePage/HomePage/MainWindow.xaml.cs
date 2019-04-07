@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Media;
 using System.Text;
@@ -24,9 +25,6 @@ namespace Hangman
       public MainWindow()
       {
          InitializeComponent();
-         SoundPlayer main_music = new SoundPlayer("Sound/Background.wav");
-         main_music.Load();
-         main_music.PlayLooping();
       }
 
       /*********************************************************************/
@@ -112,6 +110,5 @@ namespace Hangman
          }
          return;
       }
-
    }
 }

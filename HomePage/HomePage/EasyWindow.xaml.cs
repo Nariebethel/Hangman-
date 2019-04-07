@@ -37,5 +37,11 @@ namespace Hangman
       {
          InitializeComponent();
       }
+
+      private void Main_word()
+      {
+         Random 
+      }
+
    }
 }
