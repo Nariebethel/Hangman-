@@ -24,10 +24,14 @@ namespace Hangman
 
    public partial class EasyWindow : Window
    {
-      private int random_number;
-      private char[] word_letters;
-      private DispatcherTimer dispatcherTimer = new DispatcherTimer();
-      private Stopwatch stopWatch = new Stopwatch();
+      private char[]          word_letters;
+      private int             random_number;
+      private int             win_condition = 0;
+      private DispatcherTimer dispatcher_timer = new DispatcherTimer();
+      private Stopwatch       stop_watch       = new Stopwatch();
+
+      private const int LIST_SIZE = 9;
+      private const int WORD_SIZE = 4;
 
       private List<string> easy_list = new List<string>()
       {
@@ -52,10 +56,10 @@ namespace Hangman
          
          Random random = new Random();
 
-         dispatcherTimer.Tick += new EventHandler(Timer_tick);
-         dispatcherTimer.Interval = new TimeSpan(0, 0, 0, 1);
+         dispatcher_timer.Tick    += new EventHandler(Timer_tick);
+         dispatcher_timer.Interval = new TimeSpan(0, 0, 0, 1);
 
-         random_number = random.Next(0, 9);
+         random_number = random.Next(0, LIST_SIZE);
          word_letters  = Get_Word();
       }
 
@@ -137,39 +141,55 @@ namespace Hangman
       {
          Button button_click = (Button)sender;
          string letter_chosen;
-         char  button_letter;
+         char   button_letter;
 
-         if(stopWatch.IsRunning == false)
-         {
-            stopWatch.Start();
-            dispatcherTimer.Start();
-         }
 
          letter_chosen = button_click.Content.ToString();
          letter_chosen = letter_chosen.ToLower();
          button_letter = Convert.ToChar(letter_chosen);
 
+         if (stop_watch.IsRunning == false)
+         {
+            stop_watch.Start();
+            dispatcher_timer.Start();
+         }
+
          button_click.Visibility = Visibility.Hidden;
 
          if (Validate_Selection(button_letter) == true)
+         {
+            win_condition += 1;
             Get_index(button_letter, button_click);
+         }
          else
          {
             Used_Letters_Label.Foreground = new SolidColorBrush(Colors.Red);
             Used_Letters_Label.Content += letter_chosen.ToUpper() + " ";
+         }
+
+         if (win_condition == WORD_SIZE)
+         {
+            TimeSpan clock = stop_watch.Elapsed;
+
+            Win_Time_Label.Content = String.Format("{0:00}:{1:00}", clock.Minutes, clock.Seconds);
+
+            stop_watch.Stop();
+            dispatcher_timer.Stop();
+            Win_Grid.Visibility = Visibility.Visible;
          }
       }
 
       /*********************************************************************/
       /*                                                 */
       /*********************************************************************/
-      void Timer_tick(object sender, EventArgs e)
+      private void Timer_tick(object sender, EventArgs e)
       {
-         if (stopWatch.IsRunning == true)
+         if (stop_watch.IsRunning == true)
          {
-            TimeSpan clock = stopWatch.Elapsed;
+            TimeSpan clock = stop_watch.Elapsed;
             Timer_Label.Content = String.Format("{0:00}:{1:00}", clock.Minutes, clock.Seconds);
          }
       }
+
    }
 }

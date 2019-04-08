@@ -9,10 +9,10 @@
         Title="Hangman" Height="800" Width="1500" WindowStartupLocation="CenterScreen" WindowState="Maximized" WindowStyle="SingleBorderWindow" Icon="Images/icon.ico">
    <Grid>
       <Grid.Background>
-         <ImageBrush ImageSource="Images/CoverPhoto.png"/>
+         <ImageBrush ImageSource="Images/CoverPhoto3.png"/>
       </Grid.Background>
 
-      <Button x:Name="Play_Button" Margin="814,318,131.6,334.2" BorderThickness="0" Click="Play_Button_Click" Foreground="{x:Null}" BorderBrush="Black" FontSize="72" FontWeight="Bold" MouseEnter="Play_Button_MouseEnter" MouseLeave="Play_Button_MouseLeave">
+      <Button x:Name="Play_Button" Margin="888,322,111.6,319.2" Visibility="Visible" BorderThickness="0" Click="Play_Button_Click" Foreground="{x:Null}" BorderBrush="Black" FontSize="72" FontWeight="Bold" MouseEnter="Play_Button_MouseEnter" MouseLeave="Play_Button_MouseLeave" Background="{x:Null}">
          <Button.Template>
             <ControlTemplate TargetType="Button">
                <Border x:Name="Border" CornerRadius="8,8,8,8" BorderThickness="0">
