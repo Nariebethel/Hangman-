@@ -10,6 +10,7 @@
       <Grid.Background>
          <ImageBrush ImageSource="Images/EasyBackground.png"/>
       </Grid.Background>
+
       <Grid HorizontalAlignment="Left" Height="318" Margin="688,447,0,0" VerticalAlignment="Top" Width="796">
          <Button x:Name="A_button" Content="A" HorizontalAlignment="Left" Margin="19,20,0,0" VerticalAlignment="Top" Width="56" Height="51" FontSize="20" FontFamily="Segoe UI Black" FontWeight="Bold" BorderBrush="Black" Click="Letter_Button_Click">
             <Button.Background>
@@ -191,10 +192,22 @@
          </Label.Template>
       </Label>
       <Grid x:Name="Win_Grid" Margin="0,0,-0.4,0.2" Visibility="Hidden">
-         <Rectangle Fill="Black" Stroke="Black" Opacity="0.55"/>
+         <Rectangle Fill="Black" Stroke="Black" Opacity="0.55" Loaded="Return_Home"/>
          <Label x:Name="Win_Label" Content="You Won!" Margin="503,106,507,584" Foreground="White" FontSize="72" FontFamily="Ink Free" HorizontalContentAlignment="Center" FontWeight="Bold"/>
          <Label x:Name="Win_Time_Label" HorizontalAlignment="Left" Margin="661,196,0,0" VerticalAlignment="Top" Height="71" Width="190" FontSize="48" FontFamily="Ink Free" FontWeight="Bold" Foreground="White" HorizontalContentAlignment="Center"/>
          <Label Content="Press any button to return home" Margin="503,390,444,328" FontSize="36" FontFamily="Ink Free" FontWeight="Bold" HorizontalContentAlignment="Center" Foreground="White"/>
       </Grid>
+      <Label x:Name="Letter_Count_Label" Content="Letters left: 4" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" Margin="215,10,0,0" Height="54" Width="289" FontSize="24" FontFamily="Ink Free" FontWeight="Bold">
+         <Label.Template>
+            <ControlTemplate TargetType="Label">
+               <Border CornerRadius="8,8,8,8" BorderThickness="2"  BorderBrush="Black">
+                  <Border.Effect>
+                     <DropShadowEffect />
+                  </Border.Effect>
+                  <ContentPresenter Margin="3" HorizontalAlignment="Center" VerticalAlignment="Center" RecognizesAccessKey="True"/>
+               </Border>
+            </ControlTemplate>
+         </Label.Template>
+      </Label>
    </Grid>
 </Window>

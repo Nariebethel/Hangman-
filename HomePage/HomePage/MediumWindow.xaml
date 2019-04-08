@@ -7,8 +7,197 @@
         mc:Ignorable="d"
         Title="Hangman" Height="800" Width="1500" WindowStartupLocation="CenterScreen" WindowState="Maximized" WindowStyle="SingleBorderWindow" Icon="Images/icon.ico">
    <Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="Images/MediumBackground.png"/>
-        </Grid.Background>
-    </Grid>
+      <Grid.Background>
+         <ImageBrush ImageSource="Images/MediumBackground.png"/>
+      </Grid.Background>
+
+      <Grid Margin="740,309,116.6,383.2">
+         <Label x:Name="First_Letter_Label"  Content="___________________" HorizontalAlignment="Left" VerticalAlignment="Top" Height="83" Width="102" FontSize="36" FontFamily="Segoe UI Black" FontWeight="Bold" FontStyle="Italic" HorizontalContentAlignment="Center"/>
+         <Label x:Name="Second_Letter_Label"  Content="___________________" HorizontalAlignment="Left" VerticalAlignment="Top" Height="83" Width="102" FontSize="36" FontFamily="Segoe UI Black" FontWeight="Bold" FontStyle="Italic" HorizontalContentAlignment="Center" Margin="107,0,0,0"/>
+         <Label x:Name="Third_Letter_Label"  Content="___________________" HorizontalAlignment="Left" VerticalAlignment="Top" Height="83" Width="102" FontSize="36" FontFamily="Segoe UI Black" FontWeight="Bold" FontStyle="Italic" HorizontalContentAlignment="Center" Margin="214,0,0,0"/>
+         <Label x:Name="Fourth_Letter_Label"  Content="___________________" HorizontalAlignment="Left" VerticalAlignment="Top" Height="83" Width="102" FontSize="36" FontFamily="Segoe UI Black" FontWeight="Bold" FontStyle="Italic" HorizontalContentAlignment="Center" Margin="321,0,0,0"/>
+         <Label x:Name="Fifth_Letter_Label"  Content="___________________" HorizontalAlignment="Left" VerticalAlignment="Top" Height="83" Width="102" FontSize="36" FontFamily="Segoe UI Black" FontWeight="Bold" FontStyle="Italic" HorizontalContentAlignment="Center" Margin="428,0,0,0"/>
+         <Label x:Name="Sixth_Letter_Label"  Content="___________________" HorizontalAlignment="Left" VerticalAlignment="Top" Height="83" Width="102" FontSize="36" FontFamily="Segoe UI Black" FontWeight="Bold" FontStyle="Italic" HorizontalContentAlignment="Center" Margin="535,0,0,0"/>
+      </Grid>
+
+      <Grid HorizontalAlignment="Left" Height="318" Margin="688,447,0,0" VerticalAlignment="Top" Width="796">
+         <Button x:Name="A_button" Content="A" HorizontalAlignment="Left" Margin="19,20,0,0" VerticalAlignment="Top" Width="56" Height="51" FontSize="20" FontFamily="Segoe UI Black" FontWeight="Bold" BorderBrush="Black" Click="Letter_Button_Click">
+            <Button.Background>
+               <SolidColorBrush Color="#FF080808" Opacity="0.05"/>
+            </Button.Background>
+         </Button>
+         <Button x:Name="B_button" Content="B" HorizontalAlignment="Left" Margin="92,20,0,0" VerticalAlignment="Top" Width="56" Height="51" FontSize="20" FontFamily="Segoe UI Black" FontWeight="Bold" BorderBrush="Black" Click="Letter_Button_Click">
+            <Button.Background>
+               <SolidColorBrush Color="#FF080808" Opacity="0.05"/>
+            </Button.Background>
+         </Button>
+         <Button x:Name="C_button" Content="C" HorizontalAlignment="Left" Margin="164,20,0,0" VerticalAlignment="Top" Width="56" Height="51" FontSize="20" FontFamily="Segoe UI Black" FontWeight="Bold" BorderBrush="Black" RenderTransformOrigin="0.5,0.5" Click="Letter_Button_Click">
+            <Button.Background>
+               <SolidColorBrush Color="#FF080808" Opacity="0.05"/>
+            </Button.Background>
+         </Button>
+         <Button x:Name="D_button" Content="D" HorizontalAlignment="Left" Margin="237,20,0,0" VerticalAlignment="Top" Width="56" Height="51" FontSize="20" FontFamily="Segoe UI Black" FontWeight="Bold" BorderBrush="Black" RenderTransformOrigin="1.573,0.563" Click="Letter_Button_Click">
+            <Button.Background>
+               <SolidColorBrush Color="#FF080808" Opacity="0.05"/>
+            </Button.Background>
+         </Button>
+         <Button x:Name="E_button" Content="E" HorizontalAlignment="Left" Margin="309,20,0,0" VerticalAlignment="Top" Width="56" Height="51" FontSize="20" FontFamily="Segoe UI Black" FontWeight="Bold" BorderBrush="Black" RenderTransformOrigin="1.573,0.563" Click="Letter_Button_Click">
+            <Button.Background>
+               <SolidColorBrush Color="#FF080808" Opacity="0.05"/>
+            </Button.Background>
+         </Button>
+         <Button x:Name="F_button" Content="F" HorizontalAlignment="Left" Margin="381,20,0,0" VerticalAlignment="Top" Width="56" Height="51" FontSize="20" FontFamily="Segoe UI Black" FontWeight="Bold" BorderBrush="Black" RenderTransformOrigin="1.573,0.563" Click="Letter_Button_Click">
+            <Button.Background>
+               <SolidColorBrush Color="#FF080808" Opacity="0.05"/>
+            </Button.Background>
+         </Button>
+         <Button x:Name="G_button" Content="G" HorizontalAlignment="Left" Margin="447,20,0,0" VerticalAlignment="Top" Width="56" Height="51" FontSize="20" FontFamily="Segoe UI Black" FontWeight="Bold" BorderBrush="Black" RenderTransformOrigin="1.573,0.563" Click="Letter_Button_Click">
+            <Button.Background>
+               <SolidColorBrush Color="#FF080808" Opacity="0.05"/>
+            </Button.Background>
+         </Button>
+         <Button x:Name="H_button" Content="H" HorizontalAlignment="Left" Margin="517,20,0,0" VerticalAlignment="Top" Width="56" Height="51" FontSize="20" FontFamily="Segoe UI Black" FontWeight="Bold" BorderBrush="Black" RenderTransformOrigin="0.5,0.5" Click="Letter_Button_Click">
+            <Button.Background>
+               <SolidColorBrush Color="#FF080808" Opacity="0.05"/>
+            </Button.Background>
+         </Button>
+         <Button x:Name="I_button" Content="I" HorizontalAlignment="Left" Margin="587,20,0,0" VerticalAlignment="Top" Width="56" Height="51" FontSize="20" FontFamily="Segoe UI Black" FontWeight="Bold" BorderBrush="Black" RenderTransformOrigin="1.573,0.563" Click="Letter_Button_Click">
+            <Button.Background>
+               <SolidColorBrush Color="#FF080808" Opacity="0.05"/>
+            </Button.Background>
+         </Button>
+         <Button x:Name="J_button" Content="J" HorizontalAlignment="Left" Margin="658,20,0,0" VerticalAlignment="Top" Width="56" Height="51" FontSize="20" FontFamily="Segoe UI Black" FontWeight="Bold" BorderBrush="Black" RenderTransformOrigin="0.5,0.5" Click="Letter_Button_Click">
+            <Button.Background>
+               <SolidColorBrush Color="#FF080808" Opacity="0.05"/>
+            </Button.Background>
+         </Button>
+         <Button x:Name="K_button" Content="K" HorizontalAlignment="Left" Margin="730,20,0,0" VerticalAlignment="Top" Width="56" Height="51" FontSize="20" FontFamily="Segoe UI Black" FontWeight="Bold" BorderBrush="Black" RenderTransformOrigin="1.573,0.563" Click="Letter_Button_Click">
+            <Button.Background>
+               <SolidColorBrush Color="#FF080808" Opacity="0.05"/>
+            </Button.Background>
+         </Button>
+         <Button x:Name="L_button" Content="L" HorizontalAlignment="Left" Margin="55,85,0,0" VerticalAlignment="Top" Width="56" Height="51" FontSize="20" FontFamily="Segoe UI Black" FontWeight="Bold" BorderBrush="Black" Click="Letter_Button_Click">
+            <Button.Background>
+               <SolidColorBrush Color="#FF080808" Opacity="0.05"/>
+            </Button.Background>
+         </Button>
+         <Button x:Name="M_button" Content="M" HorizontalAlignment="Left" Margin="131,85,0,0" VerticalAlignment="Top" Width="56" Height="51" FontSize="20" FontFamily="Segoe UI Black" FontWeight="Bold" BorderBrush="Black" Click="Letter_Button_Click">
+            <Button.Background>
+               <SolidColorBrush Color="#FF080808" Opacity="0.05"/>
+            </Button.Background>
+         </Button>
+         <Button x:Name="N_button" Content="N" HorizontalAlignment="Left" Margin="204,85,0,0" VerticalAlignment="Top" Width="56" Height="51" FontSize="20" FontFamily="Segoe UI Black" FontWeight="Bold" BorderBrush="Black" Click="Letter_Button_Click">
+            <Button.Background>
+               <SolidColorBrush Color="#FF080808" Opacity="0.05"/>
+            </Button.Background>
+         </Button>
+         <Button x:Name="O_button" Content="O" HorizontalAlignment="Left" Margin="276,85,0,0" VerticalAlignment="Top" Width="56" Height="51" FontSize="20" FontFamily="Segoe UI Black" FontWeight="Bold" BorderBrush="Black" Click="Letter_Button_Click">
+            <Button.Background>
+               <SolidColorBrush Color="#FF080808" Opacity="0.05"/>
+            </Button.Background>
+         </Button>
+         <Button x:Name="P_button" Content="P" HorizontalAlignment="Left" Margin="348,85,0,0" VerticalAlignment="Top" Width="56" Height="51" FontSize="20" FontFamily="Segoe UI Black" FontWeight="Bold" BorderBrush="Black" Click="Letter_Button_Click">
+            <Button.Background>
+               <SolidColorBrush Color="#FF080808" Opacity="0.05"/>
+            </Button.Background>
+         </Button>
+         <Button x:Name="Q_button" Content="Q" HorizontalAlignment="Left" Margin="417,85,0,0" VerticalAlignment="Top" Width="56" Height="51" FontSize="20" FontFamily="Segoe UI Black" FontWeight="Bold" BorderBrush="Black" Click="Letter_Button_Click">
+            <Button.Background>
+               <SolidColorBrush Color="#FF080808" Opacity="0.05"/>
+            </Button.Background>
+         </Button>
+         <Button x:Name="R_button" Content="R" HorizontalAlignment="Left" Margin="484,85,0,0" VerticalAlignment="Top" Width="56" Height="51" FontSize="20" FontFamily="Segoe UI Black" FontWeight="Bold" BorderBrush="Black" Click="Letter_Button_Click">
+            <Button.Background>
+               <SolidColorBrush Color="#FF080808" Opacity="0.05"/>
+            </Button.Background>
+         </Button>
+         <Button x:Name="S_button" Content="S" HorizontalAlignment="Left" Margin="553,85,0,0" VerticalAlignment="Top" Width="56" Height="51" FontSize="20" FontFamily="Segoe UI Black" FontWeight="Bold" BorderBrush="Black" Click="Letter_Button_Click">
+            <Button.Background>
+               <SolidColorBrush Color="#FF080808" Opacity="0.05"/>
+            </Button.Background>
+         </Button>
+         <Button x:Name="T_button" Content="T" HorizontalAlignment="Left" Margin="624,85,0,0" VerticalAlignment="Top" Width="56" Height="51" FontSize="20" FontFamily="Segoe UI Black" FontWeight="Bold" BorderBrush="Black" Click="Letter_Button_Click">
+            <Button.Background>
+               <SolidColorBrush Color="#FF080808" Opacity="0.05"/>
+            </Button.Background>
+         </Button>
+         <Button x:Name="U_button" Content="U" HorizontalAlignment="Left" Margin="694,85,0,0" VerticalAlignment="Top" Width="56" Height="51" FontSize="20" FontFamily="Segoe UI Black" FontWeight="Bold" BorderBrush="Black" Click="Letter_Button_Click">
+            <Button.Background>
+               <SolidColorBrush Color="#FF080808" Opacity="0.05"/>
+            </Button.Background>
+         </Button>
+         <Button x:Name="V_button" Content="V" HorizontalAlignment="Left" Margin="243,148,0,0" VerticalAlignment="Top" Width="56" Height="51" FontSize="20" FontFamily="Segoe UI Black" FontWeight="Bold" BorderBrush="Black" Click="Letter_Button_Click">
+            <Button.Background>
+               <SolidColorBrush Color="#FF080808" Opacity="0.05"/>
+            </Button.Background>
+         </Button>
+         <Button x:Name="W_button" Content="W" HorizontalAlignment="Left" Margin="315,148,0,0" VerticalAlignment="Top" Width="56" Height="51" FontSize="20" FontFamily="Segoe UI Black" FontWeight="Bold" BorderBrush="Black" Click="Letter_Button_Click">
+            <Button.Background>
+               <SolidColorBrush Color="#FF080808" Opacity="0.05"/>
+            </Button.Background>
+         </Button>
+         <Button x:Name="X_button" Content="X" HorizontalAlignment="Left" Margin="386,148,0,0" VerticalAlignment="Top" Width="56" Height="51" FontSize="20" FontFamily="Segoe UI Black" FontWeight="Bold" BorderBrush="Black" Click="Letter_Button_Click">
+            <Button.Background>
+               <SolidColorBrush Color="#FF080808" Opacity="0.05"/>
+            </Button.Background>
+         </Button>
+         <Button x:Name="Y_button" Content="Y" HorizontalAlignment="Left" Margin="457,148,0,0" VerticalAlignment="Top" Width="56" Height="51" FontSize="20" FontFamily="Segoe UI Black" FontWeight="Bold" BorderBrush="Black" Click="Letter_Button_Click">
+            <Button.Background>
+               <SolidColorBrush Color="#FF080808" Opacity="0.05"/>
+            </Button.Background>
+         </Button>
+         <Button x:Name="Z_button" Content="Z" HorizontalAlignment="Left" Margin="525,148,0,0" VerticalAlignment="Top" Width="56" Height="51" FontSize="20" FontFamily="Segoe UI Black" FontWeight="Bold" BorderBrush="Black" Click="Letter_Button_Click">
+            <Button.Background>
+               <SolidColorBrush Color="#FF080808" Opacity="0.05"/>
+            </Button.Background>
+         </Button>
+
+         <Label x:Name="Used_Letters_Label" Content="" HorizontalAlignment="Left" Margin="55,233,0,0" VerticalAlignment="Top" Height="58" Width="731" FontSize="20" FontFamily="Segoe UI Black"/>
+      </Grid>
+
+      <Grid x:Name="Win_Grid" Margin="0,0,-0.4,0.2" Visibility="Hidden">
+         <Rectangle Fill="Black" Stroke="Black" Opacity="0.55" Loaded="Return_Home"/>
+         <Label x:Name="Win_Label" Content="You Won!" Margin="503,106,507,584" Foreground="White" FontSize="72" FontFamily="Ink Free" HorizontalContentAlignment="Center" FontWeight="Bold"/>
+         <Label x:Name="Win_Time_Label" HorizontalAlignment="Left" Margin="661,196,0,0" VerticalAlignment="Top" Height="71" Width="190" FontSize="48" FontFamily="Ink Free" FontWeight="Bold" Foreground="White" HorizontalContentAlignment="Center"/>
+         <Label Content="Press any button to return home" Margin="503,390,444,328" FontSize="36" FontFamily="Ink Free" FontWeight="Bold" HorizontalContentAlignment="Center" Foreground="White"/>
+      </Grid>
+
+      <Label x:Name="Timer_Label" Content="00:00" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="54" Width="184" FontSize="36" FontFamily="Ink Free" FontWeight="Bold" HorizontalContentAlignment="Center">
+         <Label.Template>
+            <ControlTemplate TargetType="Label">
+               <Border CornerRadius="8,8,8,8" BorderThickness="2"  BorderBrush="Black">
+                  <Border.Effect>
+                     <DropShadowEffect />
+                  </Border.Effect>
+                  <ContentPresenter Margin="3" HorizontalAlignment="Center" VerticalAlignment="Center" RecognizesAccessKey="True"/>
+               </Border>
+            </ControlTemplate>
+         </Label.Template>
+      </Label>
+      <Button Margin="0,10,29.6,0" BorderThickness="0" Click="Home_Button_Click" Height="69" VerticalAlignment="Top" HorizontalAlignment="Right" Width="90">
+         <Button.Template>
+            <ControlTemplate TargetType="{x:Type Button}">
+               <Border x:Name="Home_Button" CornerRadius="8,8,8,8" BorderThickness="2"  BorderBrush="Black">
+                  <Border.Background>
+                     <ImageBrush ImageSource="Images/Home_Button.png"/>
+                  </Border.Background>
+                  <Border.Effect>
+                     <DropShadowEffect />
+                  </Border.Effect>
+                  <ContentPresenter Margin="2" HorizontalAlignment="Center" VerticalAlignment="Center" RecognizesAccessKey="True"/>
+               </Border>
+               <ControlTemplate.Triggers>
+                  <Trigger Property="IsMouseOver" Value="true" >
+                     <Setter TargetName="Home_Button" Property="Background">
+                        <Setter.Value>
+                           <ImageBrush ImageSource="Images/Home_Button.png" Opacity="0.5"/>
+                        </Setter.Value>
+                     </Setter>
+                  </Trigger>
+               </ControlTemplate.Triggers>
+            </ControlTemplate>
+         </Button.Template>
+      </Button>
+
+   </Grid>
 </Window>

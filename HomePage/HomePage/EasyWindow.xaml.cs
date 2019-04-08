@@ -2,16 +2,10 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using System.Windows.Threading;
 
 namespace Hangman
@@ -63,7 +57,6 @@ namespace Hangman
          word_letters  = Get_Word();
       }
 
-
       /*********************************************************************/
       /*                                                 */
       /*********************************************************************/
@@ -81,12 +74,7 @@ namespace Hangman
 
          foreach (char letter in word_letters)
             if (letter == letter_selected)
-            {
                char_selection = true;
-               break;
-            }
-            else
-               char_selection = false;
 
          return char_selection;
       }
@@ -96,43 +84,34 @@ namespace Hangman
       /*********************************************************************/
       private void Get_index(char letter_selected, Button button_selected)
       {
-         int letter_index = -1,
-             target_index = 0;            
+         int letter_index = -1;          
 
          foreach (char letter in word_letters)
          {
             letter_index++;
             if (letter == letter_selected)
-               target_index = letter_index;
+               switch (letter_index)
+               {
+                  case 0:
+                     First_Letter_Label.Content = button_selected.Content;
+                     win_condition += 1;
+                     break;
+                  case 1:
+                     Second_Letter_Label.Content = button_selected.Content;
+                     win_condition += 1;
+                     break;
+                  case 2:
+                     Third_Letter_Label.Content = button_selected.Content;
+                     win_condition += 1;
+                     break;
+                  case 3:
+                     Fourth_Letter_Label.Content = button_selected.Content;
+                     win_condition += 1;
+                     break;
+               }  
          }
-
-         switch (target_index)
-         {
-            case 0:
-               First_Letter_Label.Content = button_selected.Content;
-               break;
-            case 1:
-               Second_Letter_Label.Content = button_selected.Content;
-               break;
-            case 2:
-               Third_Letter_Label.Content = button_selected.Content;
-               break;
-            case 3:
-               Fourth_Letter_Label.Content = button_selected.Content;
-               break;
-         }
-         return;
       }
 
-      /*********************************************************************/
-      /*                                                 */
-      /*********************************************************************/
-      private void Home_Button_Click(object sender, RoutedEventArgs e)
-      {
-         MainWindow main_window = new MainWindow();
-         main_window.Show();
-         this.Close();
-      }
 
       /*********************************************************************/
       /*                                                 */
@@ -157,15 +136,13 @@ namespace Hangman
          button_click.Visibility = Visibility.Hidden;
 
          if (Validate_Selection(button_letter) == true)
-         {
-            win_condition += 1;
             Get_index(button_letter, button_click);
-         }
          else
          {
             Used_Letters_Label.Foreground = new SolidColorBrush(Colors.Red);
             Used_Letters_Label.Content += letter_chosen.ToUpper() + " ";
          }
+         Letter_Count_Label.Content = "Letters left: " + string.Format("{0}", WORD_SIZE - win_condition);
 
          if (win_condition == WORD_SIZE)
          {
@@ -191,5 +168,22 @@ namespace Hangman
          }
       }
 
+      /*********************************************************************/
+      /*                                                 */
+      /*********************************************************************/
+      private void Return_Home(object sender, RoutedEventArgs e)
+      {
+         this.KeyDown += new KeyEventHandler(Home_Button_Click);
+      }
+
+      /*********************************************************************/
+      /*                                                 */
+      /*********************************************************************/
+      private void Home_Button_Click(object sender, RoutedEventArgs e)
+      {
+         MainWindow main_window = new MainWindow();
+         main_window.Show();
+         this.Close();
+      }
    }
 }
