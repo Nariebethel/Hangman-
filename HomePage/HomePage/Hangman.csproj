@@ -163,6 +163,8 @@
     <Resource Include="Images\MediumBackground.png" />
     <Resource Include="Images\HardBackground.png" />
     <Resource Include="Images\ExtremeBackground.png" />
+    <Resource Include="Images\Play_Button.png" />
+    <Resource Include="Images\Home_Button.png" />
     <Content Include="Sound\Background.wav" />
     <Content Include="Sound\Chalk_Sound.mp3" />
   </ItemGroup>

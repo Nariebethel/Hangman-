@@ -20,6 +20,7 @@ namespace Hangman
    /// <summary>
    /// Interaction logic for MainWindow.xaml
    /// </summary>
+   /// 
    public partial class MainWindow : Window
    {
       public MainWindow()
@@ -33,30 +34,30 @@ namespace Hangman
       private void Play_Button_Click(object sender, RoutedEventArgs e)
       {
          string        level_difficulty;
-         EasyWindow    easy_window    = new EasyWindow(this);
-         MediumWindow  medium_window  = new MediumWindow();
-         HardWindow    hard_window    = new HardWindow();
-         ExtremeWindow extreme_window = new ExtremeWindow();
 
          level_difficulty = Level_Difficulty_Label.Content.ToString();
 
          switch(level_difficulty)
          {
             case "EASY":
+               EasyWindow easy_window = new EasyWindow();
                easy_window.Show();
-               this.Hide();
+               this.Close();
                break;
             case "MEDIUM":
+               MediumWindow medium_window = new MediumWindow();
                medium_window.Show();
-               this.Hide();
+               this.Close();
                break;
             case "HARD":
+               HardWindow hard_window = new HardWindow();
                hard_window.Show();
-               this.Hide();
+               this.Close();
                break;
             case "EXTREME":
+               ExtremeWindow extreme_window = new ExtremeWindow();
                extreme_window.Show();
-               this.Hide();
+               this.Close();
                break;
             default:
                MessageBox.Show("Error in difficulty", "Error");

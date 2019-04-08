@@ -145,11 +145,50 @@
          <Label x:Name="Used_Letters_Label" Content="" HorizontalAlignment="Left" Margin="55,233,0,0" VerticalAlignment="Top" Height="58" Width="731" FontSize="20" FontFamily="Segoe UI Black"/>
       </Grid>
       <Grid Margin="821,326,177.6,366.2">
-         <Label x:Name="First_Letter_Label"  Content="___________________" HorizontalAlignment="Left" VerticalAlignment="Top" Height="83" Width="102" FontSize="36" FontFamily="Segoe UI Black" FontWeight="Bold" FontStyle="Italic" HorizontalContentAlignment="Center"/>
-         <Label x:Name="Second_Letter_Label" Content="___________________" HorizontalAlignment="Left" Margin="136,0,0,0" VerticalAlignment="Top" Height="83" Width="102" FontSize="36" FontFamily="Segoe UI Black" FontWeight="Bold" FontStyle="Italic" HorizontalContentAlignment="Center"/>
-         <Label x:Name="Third_Letter_Label"  Content="___________________" HorizontalAlignment="Left" Margin="267,0,0,0" VerticalAlignment="Top" Height="83" Width="102" FontSize="36" FontFamily="Segoe UI Black" FontWeight="Bold" FontStyle="Italic" HorizontalContentAlignment="Center"/>
-         <Label x:Name="Fourth_Letter_Label" Content="___________________" HorizontalAlignment="Left" Margin="393,0,0,0" VerticalAlignment="Top" Height="83" Width="102" FontSize="36" FontFamily="Segoe UI Black" FontWeight="Bold" FontStyle="Italic" HorizontalContentAlignment="Center"/>
+         <Label x:Name="First_Letter_Label"  Content="___________________" HorizontalAlignment="Left" VerticalAlignment="Top" Height="83" Width="102" FontSize="36" FontFamily="Segoe UI Black" FontWeight="Bold" FontStyle="Italic" HorizontalContentAlignment="Center" Margin="14,0,0,0"/>
+         <Label x:Name="Second_Letter_Label" Content="___________________" HorizontalAlignment="Left" Margin="132,0,0,0" VerticalAlignment="Top" Height="83" Width="102" FontSize="36" FontFamily="Segoe UI Black" FontWeight="Bold" FontStyle="Italic" HorizontalContentAlignment="Center"/>
+         <Label x:Name="Third_Letter_Label"  Content="___________________" HorizontalAlignment="Left" Margin="251,0,0,0" VerticalAlignment="Top" Height="83" Width="102" FontSize="36" FontFamily="Segoe UI Black" FontWeight="Bold" FontStyle="Italic" HorizontalContentAlignment="Center"/>
+         <Label x:Name="Fourth_Letter_Label" Content="___________________" HorizontalAlignment="Left" Margin="373,0,0,0" VerticalAlignment="Top" Height="83" Width="102" FontSize="36" FontFamily="Segoe UI Black" FontWeight="Bold" FontStyle="Italic" HorizontalContentAlignment="Center"/>
       </Grid>
-      <Button x:Name="Home_Button" Content="Button" HorizontalAlignment="Left" Margin="1372,10,0,0" VerticalAlignment="Top" Width="113" Height="79" Background="Black" Opacity="0.1" Click="Home_Button_Click"/>
+
+      <!--Home Button-->
+      <Button Margin="0,10,9.6,0" BorderThickness="0" Click="Home_Button_Click" Height="69" VerticalAlignment="Top" HorizontalAlignment="Right" Width="90">
+         <Button.Template>
+            <ControlTemplate TargetType="Button">
+               <Border x:Name="Home_Button" CornerRadius="8,8,8,8" BorderThickness="2"  BorderBrush="Black">
+                  <Border.Background>
+                     <ImageBrush ImageSource="Images/Home_Button.png"/>
+                  </Border.Background>
+                  <Border.Effect>
+                     <DropShadowEffect />
+                  </Border.Effect>
+                  <ContentPresenter Margin="2" HorizontalAlignment="Center" VerticalAlignment="Center" RecognizesAccessKey="True"/>
+               </Border>
+               <ControlTemplate.Triggers>
+                  <Trigger Property="IsMouseOver" Value="true" >
+                     <Setter TargetName="Home_Button" Property="Background">
+                        <Setter.Value>
+                           <ImageBrush ImageSource="Images/Home_Button.png" Opacity="0.5"/>
+                        </Setter.Value>
+                     </Setter>
+                  </Trigger>
+               </ControlTemplate.Triggers>
+            </ControlTemplate>
+         </Button.Template>
+      </Button>
+
+      <!-- Timer Label -->
+      <Label x:Name="Timer_Label" Content="0:00" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="54" Width="184" FontSize="36" FontFamily="Ink Free" FontWeight="Bold" HorizontalContentAlignment="Center">
+         <Label.Template>
+            <ControlTemplate TargetType="Label">
+               <Border CornerRadius="8,8,8,8" BorderThickness="2"  BorderBrush="Black">
+                  <Border.Effect>
+                     <DropShadowEffect />
+                  </Border.Effect>
+                  <ContentPresenter Margin="3" HorizontalAlignment="Center" VerticalAlignment="Center" RecognizesAccessKey="True"/>
+               </Border>
+            </ControlTemplate>
+         </Label.Template>
+      </Label>
    </Grid>
 </Window>

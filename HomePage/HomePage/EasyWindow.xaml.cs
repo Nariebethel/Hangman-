@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace Hangman
 {
@@ -24,7 +26,8 @@ namespace Hangman
    {
       private int random_number;
       private char[] word_letters;
-      private MainWindow main_window;
+      private DispatcherTimer dispatcherTimer = new DispatcherTimer();
+      private Stopwatch stopWatch = new Stopwatch();
 
       private List<string> easy_list = new List<string>()
       {
@@ -46,24 +49,16 @@ namespace Hangman
       public EasyWindow()
       {
          InitializeComponent();
+         
          Random random = new Random();
+
+         dispatcherTimer.Tick += new EventHandler(Timer_tick);
+         dispatcherTimer.Interval = new TimeSpan(0, 0, 0, 1);
+
          random_number = random.Next(0, 9);
          word_letters  = Get_Word();
       }
 
-      /*********************************************************************/
-      /*                                                 */
-      /*********************************************************************/
-      public EasyWindow(MainWindow window)
-      {
-         Random random = new Random();
-
-         InitializeComponent();
-
-         main_window   = window;
-         random_number = random.Next(1, 10);
-         word_letters  = Get_Word();
-      }
 
       /*********************************************************************/
       /*                                                 */
@@ -98,7 +93,7 @@ namespace Hangman
       private void Get_index(char letter_selected, Button button_selected)
       {
          int letter_index = -1,
-             target_index = 0;
+             target_index = 0;            
 
          foreach (char letter in word_letters)
          {
@@ -130,6 +125,7 @@ namespace Hangman
       /*********************************************************************/
       private void Home_Button_Click(object sender, RoutedEventArgs e)
       {
+         MainWindow main_window = new MainWindow();
          main_window.Show();
          this.Close();
       }
@@ -141,7 +137,13 @@ namespace Hangman
       {
          Button button_click = (Button)sender;
          string letter_chosen;
-         char button_letter;
+         char  button_letter;
+
+         if(stopWatch.IsRunning == false)
+         {
+            stopWatch.Start();
+            dispatcherTimer.Start();
+         }
 
          letter_chosen = button_click.Content.ToString();
          letter_chosen = letter_chosen.ToLower();
@@ -155,6 +157,18 @@ namespace Hangman
          {
             Used_Letters_Label.Foreground = new SolidColorBrush(Colors.Red);
             Used_Letters_Label.Content += letter_chosen.ToUpper() + " ";
+         }
+      }
+
+      /*********************************************************************/
+      /*                                                 */
+      /*********************************************************************/
+      void Timer_tick(object sender, EventArgs e)
+      {
+         if (stopWatch.IsRunning == true)
+         {
+            TimeSpan clock = stopWatch.Elapsed;
+            Timer_Label.Content = String.Format("{0:00}:{1:00}", clock.Minutes, clock.Seconds);
          }
       }
    }
