@@ -150,9 +150,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\CoverPhoto.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\icon.ico" />
   </ItemGroup>
   <ItemGroup>
@@ -165,6 +162,9 @@
     <Resource Include="Images\ExtremeBackground.png" />
     <Resource Include="Images\Play_Button.png" />
     <Resource Include="Images\Home_Button.png" />
+    <Resource Include="Images\CoverPhoto3.png" />
+    <Resource Include="Images\CoverPhoto.png" />
+    <Resource Include="Images\CoverPhoto2.png" />
     <Content Include="Sound\Background.wav" />
     <Content Include="Sound\Chalk_Sound.mp3" />
   </ItemGroup>
