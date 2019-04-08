@@ -23,7 +23,7 @@ namespace Hangman
    {
       private char[] word_letters;
       private int random_number;
-      private int win_condition = 0;
+      private int letters_found = 0;
       private DispatcherTimer dispatcher_timer = new DispatcherTimer();
       private Stopwatch stop_watch = new Stopwatch();
 
@@ -94,27 +94,27 @@ namespace Hangman
                {
                   case 0:
                      First_Letter_Label.Content = button_selected.Content;
-                     win_condition += 1;
+                     letters_found += 1;
                      break;
                   case 1:
                      Second_Letter_Label.Content = button_selected.Content;
-                     win_condition += 1;
+                     letters_found += 1;
                      break;
                   case 2:
                      Third_Letter_Label.Content = button_selected.Content;
-                     win_condition += 1;
+                     letters_found += 1;
                      break;
                   case 3:
                      Fourth_Letter_Label.Content = button_selected.Content;
-                     win_condition += 1;
+                     letters_found += 1;
                      break;
                   case 4:
                      Fifth_Letter_Label.Content = button_selected.Content;
-                     win_condition += 1;
+                     letters_found += 1;
                      break;
                   case 5:
                      Sixth_Letter_Label.Content = button_selected.Content;
-                     win_condition += 1;
+                     letters_found += 1;
                      break;
                }
          }
@@ -150,7 +150,7 @@ namespace Hangman
             Used_Letters_Label.Content += letter_chosen.ToUpper() + " ";
          }
 
-         if (win_condition == WORD_SIZE)
+         if (letters_found == WORD_SIZE)
          {
             TimeSpan clock = stop_watch.Elapsed;
 
@@ -177,19 +177,32 @@ namespace Hangman
       /*********************************************************************/
       /*                                                 */
       /*********************************************************************/
-      private void Return_Home(object sender, RoutedEventArgs e)
-      {
-         this.KeyDown += new KeyEventHandler(Home_Button_Click);
-      }
-
-      /*********************************************************************/
-      /*                                                 */
-      /*********************************************************************/
       private void Home_Button_Click(object sender, RoutedEventArgs e)
       {
          MainWindow main_window = new MainWindow();
          main_window.Show();
          this.Close();
+      }
+
+      /*********************************************************************/
+      /*                                                 */
+      /*********************************************************************/
+      private void Return_Home(object sender, RoutedEventArgs e)
+      {
+         this.KeyDown += new KeyEventHandler(Timer_Tick);
+      }
+
+      /*********************************************************************/
+      /*                                                 */
+      /*********************************************************************/
+      private void Timer_Tick(object sender, RoutedEventArgs e)
+      {
+         if (letters_found == WORD_SIZE)
+         {
+            MainWindow main_window = new MainWindow();
+            main_window.Show();
+            this.Close();
+         }
       }
    }
 }

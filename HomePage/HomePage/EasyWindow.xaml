@@ -197,7 +197,9 @@
          <Label x:Name="Win_Time_Label" HorizontalAlignment="Left" Margin="661,196,0,0" VerticalAlignment="Top" Height="71" Width="190" FontSize="48" FontFamily="Ink Free" FontWeight="Bold" Foreground="White" HorizontalContentAlignment="Center"/>
          <Label Content="Press any button to return home" Margin="503,390,444,328" FontSize="36" FontFamily="Ink Free" FontWeight="Bold" HorizontalContentAlignment="Center" Foreground="White"/>
       </Grid>
-      <Label x:Name="Letter_Count_Label" Content="Letters left: 4" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" Margin="215,10,0,0" Height="54" Width="289" FontSize="24" FontFamily="Ink Free" FontWeight="Bold">
+
+      <!--Letter count-->
+      <!--<Label x:Name="Letter_Count_Label" Content="Letters left: 4" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" Margin="215,10,0,0" Height="54" Width="289" FontSize="24" FontFamily="Ink Free" FontWeight="Bold">
          <Label.Template>
             <ControlTemplate TargetType="Label">
                <Border CornerRadius="8,8,8,8" BorderThickness="2"  BorderBrush="Black">
@@ -208,6 +210,6 @@
                </Border>
             </ControlTemplate>
          </Label.Template>
-      </Label>
+      </Label>-->
    </Grid>
 </Window>
