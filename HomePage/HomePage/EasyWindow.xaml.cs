@@ -24,8 +24,8 @@ namespace Hangman
       private DispatcherTimer dispatcher_timer = new DispatcherTimer();
       private Stopwatch       stop_watch       = new Stopwatch();
 
-      private const int LIST_SIZE = 9;
-      private const int WORD_SIZE = 4;
+      private const int LIST_SIZE = 9; /* Maximum list size                */
+      private const int WORD_SIZE = 4; /* Maximum word length              */
 
       private List<string> easy_list = new List<string>()
       {
@@ -58,7 +58,7 @@ namespace Hangman
       }
 
       /*********************************************************************/
-      /*                                                 */
+      /*               Get a random word from the list                     */
       /*********************************************************************/
       private char[] Get_Word()
       {
@@ -66,7 +66,7 @@ namespace Hangman
       }
 
       /*********************************************************************/
-      /*                                                 */
+      /*                Get the correct selected letter                    */
       /*********************************************************************/
       private bool Validate_Selection(char letter_selected)
       {
@@ -80,7 +80,7 @@ namespace Hangman
       }
 
       /*********************************************************************/
-      /*                                                 */
+      /*               Get the position of each letter                     */
       /*********************************************************************/
       private void Get_index(char letter_selected, Button button_selected)
       {
@@ -159,7 +159,7 @@ namespace Hangman
       }
 
       /*********************************************************************/
-      /*                                                 */
+      /*                       Display the time                            */
       /*********************************************************************/
       private void Timer_tick(object sender, EventArgs e)
       {
@@ -171,7 +171,7 @@ namespace Hangman
       }
 
       /*********************************************************************/
-      /*                                                 */
+      /*                 Return the user to the home page                  */
       /*********************************************************************/
       private void Home_Button_Click(object sender, RoutedEventArgs e)
       {
@@ -189,7 +189,7 @@ namespace Hangman
       }
 
       /*********************************************************************/
-      /*                                                 */
+      /*    Display the total time taken to get the correct word           */
       /*********************************************************************/
       private void Timer_Tick(object sender, RoutedEventArgs e)
       {

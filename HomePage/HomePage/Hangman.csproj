@@ -165,6 +165,13 @@
     <Resource Include="Images\CoverPhoto3.png" />
     <Resource Include="Images\CoverPhoto.png" />
     <Resource Include="Images\CoverPhoto2.png" />
+    <Resource Include="Images\SingleBody Parts\FramePart.png" />
+    <Resource Include="Images\SingleBody Parts\BodyPart.png" />
+    <Resource Include="Images\SingleBody Parts\Headpart.png" />
+    <Resource Include="Images\SingleBody Parts\LeftarmPart.png" />
+    <Resource Include="Images\SingleBody Parts\RightarmPart.png" />
+    <Resource Include="Images\SingleBody Parts\LeftlegPart.png" />
+    <Resource Include="Images\SingleBody Parts\RightlegPart.png" />
     <Content Include="Sound\Background.wav" />
     <Content Include="Sound\Chalk_Sound.mp3" />
   </ItemGroup>
