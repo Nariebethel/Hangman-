@@ -128,7 +128,7 @@ namespace Hangman
          Button button_click = (Button)sender;
          string letter_chosen;
          char button_letter;
-
+         int previous_letter_count = letters_found;
 
          letter_chosen = button_click.Content.ToString();
          letter_chosen = letter_chosen.ToLower();
@@ -149,6 +149,14 @@ namespace Hangman
             Used_Letters_Label.Foreground = new SolidColorBrush(Colors.Red);
             Used_Letters_Label.Content += letter_chosen.ToUpper() + " ";
          }
+
+         if (previous_letter_count == letters_found)
+            foreach (Label hangman_body in Hangman.Children)
+               if (hangman_body.Visibility == Visibility.Hidden)
+               {
+                  hangman_body.Visibility = Visibility.Visible;
+                  break;
+               }
 
          if (letters_found == WORD_SIZE)
          {

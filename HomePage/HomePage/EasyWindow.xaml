@@ -145,7 +145,7 @@
 
          <Label x:Name="Used_Letters_Label" Content="" HorizontalAlignment="Left" Margin="55,233,0,0" VerticalAlignment="Top" Height="58" Width="731" FontSize="20" FontFamily="Segoe UI Black"/>
       </Grid>
-      <Grid Margin="821,326,177.6,366.2">
+      <Grid Margin="821,326,187.6,366.2">
          <Label x:Name="First_Letter_Label"  Content="___________________" HorizontalAlignment="Left" VerticalAlignment="Top" Height="83" Width="102" FontSize="36" FontFamily="Segoe UI Black" FontWeight="Bold" FontStyle="Italic" HorizontalContentAlignment="Center" Margin="14,0,0,0"/>
          <Label x:Name="Second_Letter_Label" Content="___________________" HorizontalAlignment="Left" Margin="132,0,0,0" VerticalAlignment="Top" Height="83" Width="102" FontSize="36" FontFamily="Segoe UI Black" FontWeight="Bold" FontStyle="Italic" HorizontalContentAlignment="Center"/>
          <Label x:Name="Third_Letter_Label"  Content="___________________" HorizontalAlignment="Left" Margin="251,0,0,0" VerticalAlignment="Top" Height="83" Width="102" FontSize="36" FontFamily="Segoe UI Black" FontWeight="Bold" FontStyle="Italic" HorizontalContentAlignment="Center"/>
@@ -191,25 +191,55 @@
             </ControlTemplate>
          </Label.Template>
       </Label>
-      <Grid x:Name="Win_Grid" Margin="0,0,-0.4,0.2" Visibility="Hidden">
+      <Grid x:Name="Win_Lose_Grid" Margin="0,0,-0.4,0.2" Visibility="Hidden">
          <Rectangle Fill="Black" Stroke="Black" Opacity="0.55" Loaded="Return_Home"/>
          <Label x:Name="Win_Label" Content="You Won!" Margin="503,106,507,584" Foreground="White" FontSize="72" FontFamily="Ink Free" HorizontalContentAlignment="Center" FontWeight="Bold"/>
          <Label x:Name="Win_Time_Label" HorizontalAlignment="Left" Margin="661,196,0,0" VerticalAlignment="Top" Height="71" Width="190" FontSize="48" FontFamily="Ink Free" FontWeight="Bold" Foreground="White" HorizontalContentAlignment="Center"/>
          <Label Content="Press any button to return home" Margin="503,390,444,328" FontSize="36" FontFamily="Ink Free" FontWeight="Bold" HorizontalContentAlignment="Center" Foreground="White"/>
       </Grid>
 
-      <!--Letter count-->
-      <!--<Label x:Name="Letter_Count_Label" Content="Letters left: 4" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" Margin="215,10,0,0" Height="54" Width="289" FontSize="24" FontFamily="Ink Free" FontWeight="Bold">
-         <Label.Template>
-            <ControlTemplate TargetType="Label">
-               <Border CornerRadius="8,8,8,8" BorderThickness="2"  BorderBrush="Black">
-                  <Border.Effect>
-                     <DropShadowEffect />
-                  </Border.Effect>
-                  <ContentPresenter Margin="3" HorizontalAlignment="Center" VerticalAlignment="Center" RecognizesAccessKey="True"/>
-               </Border>
-            </ControlTemplate>
-         </Label.Template>
-      </Label>-->
+      <!-- Hangman -->
+      <Grid x:Name="Hangman" Margin="10,157,762.6,185.2">
+         <Label x:Name="Haning_Frame" HorizontalAlignment="Left" VerticalAlignment="Top" Height="433" Width="721" Visibility="Hidden">
+            <Label.Background>
+               <ImageBrush ImageSource="Images/SingleBody Parts/FramePart.png" Stretch="None"/>
+            </Label.Background>
+         </Label>
+
+         <Label x:Name="Hangman_Head" HorizontalAlignment="Left" Margin="260,26,0,0" VerticalAlignment="Top" Height="391" Width="208" Panel.ZIndex="3" Visibility="Hidden">
+            <Label.Background>
+               <ImageBrush ImageSource="Images/SingleBody Parts/Headpart.png" Stretch="None"/>
+            </Label.Background>
+         </Label>
+
+         <Label x:Name="Hangman_Body" HorizontalAlignment="Left" Margin="283,143,0,0" VerticalAlignment="Top" Height="146" Width="164" Panel.ZIndex="2" Visibility="Hidden">
+            <Label.Background>
+               <ImageBrush ImageSource="Images/SingleBody Parts/BodyPart.png" Stretch="None"/>
+            </Label.Background>
+         </Label>
+
+         <Label x:Name="Left_Arm" HorizontalAlignment="Left" Margin="172,160,0,0" VerticalAlignment="Top" Height="222" Width="190" Visibility="Hidden">
+            <Label.Background>
+               <ImageBrush ImageSource="Images/SingleBody Parts/LeftarmPart.png" Stretch="None"/>
+            </Label.Background>
+         </Label>
+
+         <Label x:Name="Right_Arm" HorizontalAlignment="Left" Margin="250,150,0,0" VerticalAlignment="Top" Height="184" Width="169" Visibility="Hidden">
+            <Label.Background>
+               <ImageBrush ImageSource="Images/SingleBody Parts/RightarmPart.png" Stretch="None"/>
+            </Label.Background>
+         </Label>
+
+         <Label x:Name="Left_Leg" HorizontalAlignment="Left" Margin="245,228,0,0" VerticalAlignment="Top" Height="106" Width="163" Visibility="Hidden">
+            <Label.Background>
+               <ImageBrush ImageSource="Images/SingleBody Parts/LeftlegPart.png" Stretch="None"/>
+            </Label.Background>
+         </Label>
+         <Label x:Name="Right_Leg" HorizontalAlignment="Left" Margin="242,225,0,0" VerticalAlignment="Top" Height="118" Width="185" Visibility="Hidden">
+            <Label.Background>
+               <ImageBrush ImageSource="Images/SingleBody Parts/RightLegPart.png" Stretch="None"/>
+            </Label.Background>
+         </Label>
+      </Grid>
    </Grid>
 </Window>

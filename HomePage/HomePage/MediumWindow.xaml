@@ -198,5 +198,49 @@
             </ControlTemplate>
          </Button.Template>
       </Button>
+
+      <!-- Hangman -->
+      <Grid x:Name="Hangman" Margin="10,157,762.6,185.2">
+         <Label x:Name="Haning_Frame" HorizontalAlignment="Left" VerticalAlignment="Top" Height="433" Width="721" Visibility="Hidden">
+            <Label.Background>
+               <ImageBrush ImageSource="Images/SingleBody Parts/FramePart.png" Stretch="None"/>
+            </Label.Background>
+         </Label>
+
+         <Label x:Name="Hangman_Head" HorizontalAlignment="Left" Margin="260,26,0,0" VerticalAlignment="Top" Height="391" Width="208" Panel.ZIndex="3" Visibility="Hidden">
+            <Label.Background>
+               <ImageBrush ImageSource="Images/SingleBody Parts/Headpart.png" Stretch="None"/>
+            </Label.Background>
+         </Label>
+
+         <Label x:Name="Hangman_Body" HorizontalAlignment="Left" Margin="283,143,0,0" VerticalAlignment="Top" Height="146" Width="164" Panel.ZIndex="2" Visibility="Hidden">
+            <Label.Background>
+               <ImageBrush ImageSource="Images/SingleBody Parts/BodyPart.png" Stretch="None"/>
+            </Label.Background>
+         </Label>
+
+         <Label x:Name="Left_Arm" HorizontalAlignment="Left" Margin="172,160,0,0" VerticalAlignment="Top" Height="222" Width="190" Visibility="Hidden">
+            <Label.Background>
+               <ImageBrush ImageSource="Images/SingleBody Parts/LeftarmPart.png" Stretch="None"/>
+            </Label.Background>
+         </Label>
+
+         <Label x:Name="Right_Arm" HorizontalAlignment="Left" Margin="250,150,0,0" VerticalAlignment="Top" Height="184" Width="169" Visibility="Hidden">
+            <Label.Background>
+               <ImageBrush ImageSource="Images/SingleBody Parts/RightarmPart.png" Stretch="None"/>
+            </Label.Background>
+         </Label>
+
+         <Label x:Name="Left_Leg" HorizontalAlignment="Left" Margin="245,228,0,0" VerticalAlignment="Top" Height="106" Width="163" Visibility="Hidden">
+            <Label.Background>
+               <ImageBrush ImageSource="Images/SingleBody Parts/LeftlegPart.png" Stretch="None"/>
+            </Label.Background>
+         </Label>
+         <Label x:Name="Right_Leg" HorizontalAlignment="Left" Margin="242,225,0,0" VerticalAlignment="Top" Height="118" Width="185" Visibility="Hidden">
+            <Label.Background>
+               <ImageBrush ImageSource="Images/SingleBody Parts/RightLegPart.png" Stretch="None"/>
+            </Label.Background>
+         </Label>
+      </Grid>
    </Grid>
 </Window>

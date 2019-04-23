@@ -84,7 +84,7 @@ namespace Hangman
       /*********************************************************************/
       private void Get_index(char letter_selected, Button button_selected)
       {
-         int letter_index = -1;          
+         int letter_index = -1;
 
          foreach (char letter in word_letters)
          {
@@ -108,8 +108,8 @@ namespace Hangman
                      Fourth_Letter_Label.Content = button_selected.Content;
                      letters_found += 1;
                      break;
-               }  
-         }
+               }
+         }        
       }
 
 
@@ -121,7 +121,7 @@ namespace Hangman
          Button button_click = (Button)sender;
          string letter_chosen;
          char   button_letter;
-
+         int    previous_letter_count = letters_found;
 
          letter_chosen = button_click.Content.ToString();
          letter_chosen = letter_chosen.ToLower();
@@ -143,8 +143,13 @@ namespace Hangman
             Used_Letters_Label.Content += letter_chosen.ToUpper() + " ";
          }
 
-         /* Letter count label */
-         //Letter_Count_Label.Content = "Letters left: " + string.Format("{0}", WORD_SIZE - letters_found);
+         if (previous_letter_count == letters_found)
+            foreach (Label hangman_body in Hangman.Children)
+               if (hangman_body.Visibility == Visibility.Hidden)
+               {
+                  hangman_body.Visibility = Visibility.Visible;
+                  break;
+               }
 
          if (letters_found == WORD_SIZE)
          {
